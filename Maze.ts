@@ -20,6 +20,10 @@ class Maze {
     #FRONT_WALL = 0b0001;
     #LEFT_WALL = 0b0010;
 
+    getCell (x: number, y: number) {
+        return this.cells[y][x];
+    }
+
     generate (consoleDisplay: boolean = false) {
         for (let y = 0; y < this.height; y++) {
             this.cells.push([]);
